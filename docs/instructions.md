@@ -39,4 +39,16 @@ Here are the short descriptions of those apps:
 `contenttypes`: 
 `sessions`: Legacy app. creating a short memory. It's not being used anymore.  
 `messages`: Displaying one time notification to the user.  
-`staticfiles`: Serving static files like images, css etc.   
+`staticfiles`: Serving static files like images, css etc.  
+
+Here is how to create a new app:  
+`python manage.py startapp playground`  
+When you look at the folder structure, you will see the same folder structure.
+`migrations`: All the migration stuff will be here.  
+`admin.py`: Define how the admin interface for this app will look like  
+`apps.py`: Configure this app. Like config file. The name is misleading.
+`models.py`: Define the model classes here. We use model classes for representing the data in the database. 
+`test.py`: write the unit tests in here.
+`views.py`: Request handler. it's not a view folder like MVC framework. Name is misleading.
+
+Once this app is created, the next step is register this app into the `settings` module. Everytime you create a new app, it needs to be registered to the settings module.
