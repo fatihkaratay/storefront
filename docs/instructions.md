@@ -85,3 +85,11 @@ urlpatterns = [
     path('playground/', include('playground.urls')) # playground/hello
 ]
 ```
+
+As seen above, `vieews` are like request handlers. To render an html file, we'll use `template`. Here are the instructions:  
+
+* Create a new folder inside `playground` and called it as `templates` 
+* Create a new file inside there and call it `hello.html`
+
+Once these are done, back to the view functions, instead of returning the actual response, just return the html file as below:  
+
