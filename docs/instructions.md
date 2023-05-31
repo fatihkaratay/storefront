@@ -52,3 +52,36 @@ When you look at the folder structure, you will see the same folder structure.
 `views.py`: Request handler. it's not a view folder like MVC framework. Name is misleading.
 
 Once this app is created, the next step is register this app into the `settings` module. Everytime you create a new app, it needs to be registered to the settings module.
+
+### Creating first view:  
+Views are like `actions` in MVC framework. Like request handler. Here is how to create a view:  
+```python
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def say_hello(request):
+    return HttpResponse('Hello from the Http Response')
+```
+Once this function is created inside the views, we need to map it to the url. SO, once this url hits, this function is called.   
+The ide is that whenever user hit on `127.0.0.1:8000/playground/hello` this function above is called. Here are the steps:  
+* Inside the `playground` folder, creare `urls.py`. You could call it anything. By convension, we call it that way. Inside the file, map it to the url as below:  
+```python
+from django.urls import path
+from . import views
+
+# URLConf
+urlpatterns = [
+    path('hello/', views.say_hello)
+]
+```
+
+Once this url configuration is done, you need to added to the main url configuration as below:  
+Inside the main module which is `storefront`, open the `urls.py` file and add it there as below:  
+* Add `include()` function.
+* add URL to the urlpatterns. 
+```python
+urlpatterns = [
+    path('admin', admin.site.urls),
+    path('playground/', include('playground.urls')) # playground/hello
+]
+```
