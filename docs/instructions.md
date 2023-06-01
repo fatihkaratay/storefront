@@ -93,3 +93,6 @@ As seen above, `vieews` are like request handlers. To render an html file, we'll
 
 Once these are done, back to the view functions, instead of returning the actual response, just return the html file as below:  
 
+## Database Implementations  
+To create migrations, run the following command:  
+`python manage.py makemigrations`  
