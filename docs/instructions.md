@@ -36,7 +36,7 @@ Those apps come as default for every django project.
 Here are the short descriptions of those apps:  
 `admin`: Admin interface for managing our data.  
 `auth`: Authenticating users.  
-`contenttypes`: 
+`contenttypes`:  
 `sessions`: Legacy app. creating a short memory. It's not being used anymore.  
 `messages`: Displaying one time notification to the user.  
 `staticfiles`: Serving static files like images, css etc.  
